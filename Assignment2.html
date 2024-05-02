@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <script>
+        function final() {
+            var name = document.getElementById("StudentName").value;
+            var id = document.getElementById("Studentid").value;
+            var addr = document.getElementById("Address").value;
+            var mark1 = parseFloat(document.getElementById("Mark1").value);
+            var mark2 = parseFloat(document.getElementById("Mark2").value);
+            var mark3 = parseFloat(document.getElementById("Mark3").value);
+            var mark4 = parseFloat(document.getElementById("Mark4").value);
+            var mark5 = parseFloat(document.getElementById("Mark5").value);
+            var sum = mark1 + mark2 + mark3 + mark4 + mark5;
+            var percentage = (sum * 100 / 500.0);
+            document.write(name + "<br>");
+            document.write(id + "<br>");
+            document.write(addr + "<br>");
+            document.write("Total Mark is: " + sum + "<br>");
+            document.write("Percentage is: " + percentage);
+        }
+    </script>
+    <style>
+        body {
+            margin-top: 100px;
+            border-color: black;
+            border-width: 10px;
+            border-style: solid;
+            display: inline-block;
+            margin-left: 600px;
+            padding: 30px;
+        }
+        input {
+            padding: 10px;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Student Details</h1>
+        <input type="text" id="StudentName" placeholder="Enter Name"><br>
+        <input type="number" id="Studentid" placeholder="Enter Id"><br>
+        <input type="text" id="Address" placeholder="Address"><br>
+        <input type="number" id="Mark1" placeholder="Enter Mark 1"><br>
+        <input type="number" id="Mark2" placeholder="Enter Mark 2"><br>
+        <input type="number" id="Mark3" placeholder="Enter Mark 3"><br>
+        <input type="number" id="Mark4" placeholder="Enter Mark 4"><br>
+        <input type="number" id="Mark5" placeholder="Enter Mark 5"><br>
+        <input type="submit" value="Result" onclick="final()">
+    </center>
+</body>
+</html>
